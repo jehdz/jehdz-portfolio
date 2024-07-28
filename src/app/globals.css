@@ -196,3 +196,60 @@ body {
     border-image-source: linear-gradient(90deg, transparent, #ff007a, transparent);
   }
 }
+
+
+
+
+
+.card {
+  background: hsl(0deg 1.7% 3.36%);
+  position: relative;
+  transition: background 0.1s;
+  /* position: absolute; */
+  border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;;
+  -moz-border-radius: 0.75rem;;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card:hover {
+  --active: 1;
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsla(28, 57%, 84%, 0.076), transparent 15vmin);
+  background-attachment: fixed;
+  opacity: var(--active, 0);
+  transition: opacity 0.2s;
+  pointer-events: none;
+  border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;;
+  -moz-border-radius: 0.75rem;;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background:
+    radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(0 0% 100% / 0.5), transparent 15vmin),
+    transparent;
+     */
+    background: radial-gradient(circle at calc(var(--x)* 1px) calc(var(--y)* 1px), hsl(31.74deg 100% 50%), transparent 15vmin), transparent;
+  background-attachment: fixed;
+  pointer-events: none;
+  mask:
+    linear-gradient(white, white) 50% 0 / 100% 4px no-repeat,
+    linear-gradient(white, white) 50% 100% / 100% 4px no-repeat,
+    linear-gradient(white, white) 0 50% / 4px 100% no-repeat,
+    linear-gradient(white, white) 100% 50% / 4px 100% no-repeat;
+    border-radius: 0.75rem;
+    -webkit-border-radius: 0.75rem;;
+    -moz-border-radius: 0.75rem;;
+
+}
