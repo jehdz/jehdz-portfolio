@@ -37,7 +37,7 @@ const ProjectCard = ({ project }) => {
                 </div>
                 <div className="flex justify-between items-center mt-auto">
                     <motion.a
-                        href="#"
+                        href={project.path}
                         className="text-slate-700 font-semibold text-sm z-30 flex gap-2 whitespace-nowrap"
                         whileHover="hover"
                         variants={linkVariants}
@@ -68,7 +68,7 @@ const ProjectCard = ({ project }) => {
                                     <Icon icon="bi:github" width="1.2rem" height="1.2rem" />
                                 </motion.a>
                                 <motion.a
-                                    href={project.externalLink}
+                                    href={project.site}
                                     className="text-slate-200 z-30"
                                     whileHover={{ scale: 1.5 }}
                                     transition={{ duration: 0.25 }}

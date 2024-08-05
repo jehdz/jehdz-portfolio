@@ -1,7 +1,6 @@
 "use client";
-
-import { useScroll, useSpring, motion, useTransform } from "framer-motion";
-import NavBar from "@/components/NavBar";
+import { useScroll, useSpring, useTransform } from "framer-motion";
+import ProjectPageNavBar from "@/components/ProjectPageNavBar";
 
 export default function ProjectPageShell({children}) {
   const { scrollYProgress } = useScroll();
@@ -15,7 +14,7 @@ export default function ProjectPageShell({children}) {
 
   return (
     <>
-      <NavBar projectNav={true} />
+      <ProjectPageNavBar />
       <main className="w-full min-h-screen">
         {children}
       </main>
