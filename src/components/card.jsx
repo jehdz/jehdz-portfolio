@@ -29,7 +29,7 @@ const Card = ({ children }) => {
   const style = { maskImage, WebkitMaskImage: maskImage };
 
   return (
-    <div onMouseMove={onMouseMove} className="relative duration-700 border bg-black rounded-xl hover:bg-zinc-950/90 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 w-[400px]">
+    <div onMouseMove={onMouseMove} className="contactCard relative duration-700 border bg-black rounded-xl hover:bg-zinc-950/90 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 w-[400px] text-slate-500">
       <div className="pointer-events-none relative">
         <div className="after:rounded-xl absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
           <motion.div className="absolute inset-0 z-10 bg-gradient-to-br opacity-100 via-zinc-100/10 transition duration-1000 group-hover:opacity-50" style={style} />

@@ -222,7 +222,7 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsla(28, 57%, 84%, 0.076), transparent 15vmin);
+    radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsla(215, 16%, 47%, 0.202), transparent 15vmin);
   background-attachment: fixed;
   opacity: var(--active, 0);
   transition: opacity 0.2s;
@@ -240,7 +240,7 @@ body {
     radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(0 0% 100% / 0.5), transparent 15vmin),
     transparent;
      */
-    background: radial-gradient(circle at calc(var(--x)* 1px) calc(var(--y)* 1px), hsl(31.74deg 100% 50%), transparent 15vmin), transparent;
+    background: radial-gradient(circle at calc(var(--x)* 1px) calc(var(--y)* 1px), hsl(215, 16%, 47%), transparent 15vmin), transparent;
   background-attachment: fixed;
   pointer-events: none;
   mask:
@@ -252,4 +252,49 @@ body {
     -webkit-border-radius: 0.75rem;;
     -moz-border-radius: 0.75rem;;
 
+}
+
+.contactCard{width: 100% !important;}
+
+/* canvas {width: 100% !important; max-width: 1400px !important; height: auto;} */
+
+
+/* Shine border */
+
+.shine-border {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem; /* Adjust as needed */
+}
+
+.shine-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    #A07CFE,
+    #FE8FB5,
+    #FFBE7B
+  );
+  background-size: 300% 300%;
+  animation: shine 2s linear infinite;
+  z-index: 1;
+}
+
+@keyframes shine {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50%, 50%);
+  }
+}
+
+.shine-border > * {
+  position: relative;
+  z-index: 2;
 }
